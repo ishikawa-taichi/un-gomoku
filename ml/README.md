@@ -61,3 +61,10 @@ buffer; the first resumed generation refills it.
 2. score >= 0.70 vs `heuristic`
 3. score >= 0.55 over 400 games vs the legacy expectiminimax (hard) via
    `tools/parity-arena` (the ship gate)
+
+## Shipped model
+
+`apps/web/public/models/ungomoku-v1.onnx` is generation 121 of the `ownership`
+run (`configs/ownership.yaml`: 6 blocks x 64 ch, 5 input planes). Its two
+400-game gates vs the legacy hard CPU scored 0.517 and 0.562, so 432/800 =
+0.540 pooled: above parity, below the 0.55 gate.
